@@ -26,8 +26,33 @@ body {
   .content { background: red; }
 }
 .about {
+  background: #00bcbc;
   height: 700px;
-  .content { background: green; }
+  .content {
+    display: flex;
+    .raspberry {
+      img {
+        position: absolute;
+        border-style: none;
+        margin-top: 35px;
+        margin-left: -50px;
+      }
+    }
+    .about-us {
+      h1 {
+        margin-left: 672px;;
+        margin-top: 161px;
+        margin-bottom: -5px;;
+        font-size: 5.66rem;
+        color: #fff;
+      }
+      p {
+            margin-left: 672px;;
+            line-height: 25px;
+            color: #fff;
+      }
+    }
+  }
 }
 .services {
   height: 790px;
