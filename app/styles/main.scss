@@ -1,2 +1,26 @@
 // bower:scss
 // endbower
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background: pink;
+  > section {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 400px;
+  }
+}
+
+.intro {
+  background: red;
+}
+.about {
+  background: yellow;
+}
+.services {
+  background: blue;
+}
