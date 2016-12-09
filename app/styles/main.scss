@@ -1,10 +1,13 @@
 // bower:scss
 // endbower
 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
+  font-family: 'Raleway', sans-serif;
   > section {
     width: 100%;
     display: flex;
