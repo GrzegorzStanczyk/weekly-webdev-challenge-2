@@ -22,8 +22,52 @@ body {
 }
 
 .intro {
-  height: 1000px;
-  .content { background: red; }
+  height: 100vh;
+  background:#fafafb url(../images/strawberry.jpg) no-repeat 93% 0%;
+  @media all and (max-width: 700px) { 
+      background: #fafafb;      
+      }
+  .content { 
+    h2 {
+        font-size: 52px;
+        font-weight: bold;
+        margin-top: 30.4%;
+        margin-left: -.3%;
+        margin-bottom: 0%;
+    }
+    p {
+        max-width: 33%;
+        margin-top: 1.6%;
+        line-height: 160%;
+    }
+    a {
+        text-transform: uppercase;
+        display: inline-block;
+        background: #ff6033;
+        color: #fafafb;
+        text-decoration: none;
+        padding: 1.6% 2%;
+        margin-top: 1.3%;
+        letter-spacing: 2.5px;
+        box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.75);
+    }
+
+    @media all and (max-width: 700px) { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+                
+        h2, p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 80%;
+            text-align: center;            
+        } 
+    }
+  }
 }
 .about {
   height: 700px;
