@@ -8,7 +8,7 @@
 body {
   @include flex(column, nowrap);
   font: 16px "Raleway", sans-serif;
-  > section {
+  > section, > footer {
     width: 100%;
     @include flex(column, nowrap, flex-start, center);
     .content {
@@ -222,5 +222,17 @@ body {
         }
       }
     }
+  }
+}
+
+footer {
+  background: #262626;
+  padding: 20px;
+  .content {
+    display: flex;
+    justify-content: space-around;
+  }
+  span {
+    color: #afafaf;
   }
 }
