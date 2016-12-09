@@ -68,32 +68,43 @@ body {
 .about {
   background: #00bcbc;
   height: 700px;
+  position: relative;
+  overflow: hidden;
   .content {
     display: flex;
-    .raspberry {
-      img {
-        position: absolute;
-        border-style: none;
-        margin-top: 35px;
-        margin-left: -50px;
-      }
-    }
+     background-image: url("../images/raspberry.png");
+     background-repeat: no-repeat;
+     @media (max-width: 600px) {
+       background-position: center 500px;}
+
+
     .about-us {
       h1 {
-        margin-left: 672px;;
+        margin-left: 672px;
         margin-top: 161px;
-        margin-bottom: -5px;;
+        margin-bottom: -5px;
         font-size: 5.66rem;
         color: #fff;
+
+        @media (max-width: 600px) {
+          margin-top: 50px;
+          margin-left: 50px;
+          margin-bottom: -5px;
+          font-size: 4.5rem;
+        }
       }
       p {
             margin-left: 672px;;
             line-height: 25px;
             color: #fff;
-      }
-    }
-  }
-}
+            @media (max-width: 600px) {
+              margin-left: 300px;
+              margin-left: 50px;
+           }
+          }
+         }
+        }
+       }
 .services {
   height: 790px;
   background: #70bfff;
