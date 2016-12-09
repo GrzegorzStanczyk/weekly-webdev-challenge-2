@@ -8,7 +8,7 @@
 body {
   @include flex(column, nowrap);
   font: 16px "Raleway", sans-serif;
-  > section {
+  > section, > footer {
     width: 100%;
     @include flex(column, nowrap, flex-start, center);
     .content {
@@ -32,11 +32,16 @@ body {
     width: 100%; height: 100%;
     max-width: 1170px;
     h1 {
+<<<<<<< HEAD
       font-family: 'Pacifico', cursive;
       font-size: 3.4rem;
       font-weight: 300;}
+=======
+      // font-family: ;
+      font-size: 4rem;}
+>>>>>>> 24792563535f9d379e5a264b553f770c9c7f45be
     ul {
-      width: 47.5%; 
+      width: 47.5%;
       display: flex;
       justify-content: space-between;
       flex-flow: row nowrap;
@@ -117,7 +122,6 @@ body {
 .about {
   background: #00bcbc;
   height: 700px;
-  position: relative;
   overflow: hidden;
   .content {
     display: flex;
@@ -245,5 +249,17 @@ body {
         }
       }
     }
+  }
+}
+
+footer {
+  background: #262626;
+  padding: 20px;
+  .content {
+    display: flex;
+    justify-content: space-around;
+  }
+  span {
+    color: #afafaf;
   }
 }
