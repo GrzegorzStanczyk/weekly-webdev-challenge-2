@@ -351,6 +351,54 @@ body {
   }
 }
 
+.blog {
+  background: #b07cf7;
+  height: 700px;
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .blog-text {
+      min-width: 100%;
+      height: 200px;
+      text-align: center;
+      color: #fff;
+
+      h1 {
+        font-size: 5.66rem;
+        margin: 20px auto;
+
+      }
+      p {
+        max-width: 50%;
+        margin: 0 auto;
+      }
+    }
+
+    .blog-box {
+      background-repeat: no-repeat;
+      width: 33%;
+      min-height: 310px;
+    }
+
+    .kiwi {
+        background-image: url("../images/kiwi.png");
+      }
+    .peas {
+        background-image: url("../images/peas.png");
+      }
+     .raspberries {
+        background-image: url("../images/raspberries.png");
+      }
+     .view-more {
+        background-color: red;
+        height: 50px;
+        align-self: center;
+      }
+  }
+}
+
 footer {
   background: #262626;
   padding: 20px 0;
