@@ -18,7 +18,7 @@ body {
   }
 }
 
-* { box-sizing: border-box; }
+
 
 .main-nav {
   width: 100%;
@@ -159,12 +159,14 @@ body {
   background: #00bcbc;
   height: 700px;
   overflow: hidden;
+  @media (max-width: 600px) {
+    min-height: 900px;}
   .content {
     display: flex;
      background-image: url("../images/raspberry.png");
      background-repeat: no-repeat;
      @media (max-width: 600px) {
-       background-position: center 500px;}
+       background-position: center 670px;}
 
 
     .about-us {
@@ -187,7 +189,6 @@ body {
             line-height: 25px;
             color: #fff;
             @media (max-width: 600px) {
-              margin-left: 300px;
               margin-left: 50px;
            }
           }
@@ -313,17 +314,20 @@ body {
   }
   .pictures {
     margin: 28px -15px 39px;
-    @media (max-width: 800px) { margin: 28px 0 39px; }
     .grid-sizer { width: 1%; }
     .grid-item {
       padding: 15px;
-      width: 100%; height: 300px;
-      @media (min-width: 801px) {
-        &:nth-of-type(1) { width: 66%; height: 574px; }
-        &:nth-of-type(2),
-        &:nth-of-type(3) { width: 34%; height: 287px; }
-        &:nth-of-type(4),
-        &:nth-of-type(5) { width: 50%; height: 432px; }
+      &:nth-of-type(1) { width: 66%; height: 574px; }
+      &:nth-of-type(2) { width: 34%; height: 287px; }
+      &:nth-of-type(3) { width: 34%; height: 287px; }
+      &:nth-of-type(4) { width: 50%; height: 432px; }
+      &:nth-of-type(5) { width: 50%; height: 432px; }
+      @media (max-width: 800px) {
+        &:nth-of-type(1) { width: 100%; height: 300px; }
+        &:nth-of-type(2) { width: 100%; height: 300px; }
+        &:nth-of-type(3) { width: 100%; height: 300px; }
+        &:nth-of-type(4) { width: 100%; height: 300px; }
+        &:nth-of-type(5) { width: 100%; height: 300px; }
       }
       .image {
         width: 100%; height: 100%;
@@ -350,15 +354,14 @@ body {
 
 .blog {
   background: #b07cf7;
-  height: 700px;
+  height: auto;
   .content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 
     .blog-text {
       min-width: 100%;
-      height: 200px;
       text-align: center;
       color: #fff;
 
@@ -375,25 +378,35 @@ body {
 
     .blog-box {
       background-repeat: no-repeat;
-      width: 33%;
+      min-width: 300px;
       min-height: 310px;
+      padding: 10px;
+
     }
 
     .kiwi {
-        background-image: url("../images/kiwi.png");
+      background-image: url("../images/kiwi.png");
       }
     .peas {
         background-image: url("../images/peas.png");
       }
-     .raspberries {
+    .raspberries {
         background-image: url("../images/raspberries.png");
       }
-     .view-more {
-        background-color: red;
-        height: 50px;
-        align-self: center;
-      }
+   .buttons {
+     text-align: center;
+     width: 100%;
+    button {
+          padding: 17px 44px;
+          background: #ee323e;
+          border: none;
+          color: white;
+          font-size: 1.2em;
+          text-transform: uppercase;
+          box-shadow: 0 4px 5px rgba(black, 0.3);
+   }
   }
+ }
 }
 
 footer {
