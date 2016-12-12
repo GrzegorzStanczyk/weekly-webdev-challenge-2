@@ -3,7 +3,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
-@import "mixins";
+@import "_mixins";
 
 body {
   @include flex(column, nowrap);
