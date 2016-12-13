@@ -62,3 +62,63 @@ $(function() {
   check();
 
 });
+
+
+function init() {
+    window.addEventListener('scroll', function(e){
+        var distanceY = window.pageYOffset || document.documentElement.scrollTop;
+        var shrinkOn = 300;
+        var nav = document.querySelector('.main-nav');
+        if (distanceY > shrinkOn) {
+            nav.classList.add('smaller');
+        } else {
+            if (nav.classList.contains('smaller')) {
+                nav.classList.remove('smaller');
+            }
+        }
+    });
+}
+window.onload = init();
+
+
+
+
+$(document).ready(function () {
+    $(document).on('scroll', onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off('scroll');
+        
+        $('a').each(function () {
+            $(this).removeClass('--active');
+        })
+        $(this).addClass('--active');
+      
+        var target = this.hash;
+        var menu = target;
+        var $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on('scroll', onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.main-nav a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr('href'));
+        if (refElement.offset().top <= scrollPos && refElement.offset().top + refElement.height() > scrollPos) {
+            $('.main-nav  ul li a').removeClass('--active');
+            currLink.addClass('--active');
+        }
+        else{
+            currLink.removeClass('--active');
+        }
+    });
+}
